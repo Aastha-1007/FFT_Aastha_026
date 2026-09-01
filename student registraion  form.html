@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>Student Admission Form</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background-color:#e3f2fd;
+}
+
+h1{
+    text-align:center;
+    color:#1565c0;
+    margin-bottom:25px;
+}
+
+form{
+    border:2px solid #1565c0;
+    width:520px;
+    margin:40px auto;
+    padding:30px 45px;
+    background-color:white;
+    border-radius:10px;
+    box-shadow:5px 5px 15px gray;
+}
+
+label{
+    display:inline-block;
+    width:135px;
+    font-weight:bold;
+    color:#333;
+    margin-bottom:10px;
+}
+
+input,select,textarea{
+    width:230px;
+    height:36px;
+    padding:6px;
+    border:1px solid #999;
+    border-radius:4px;
+}
+
+textarea{
+    height:70px;
+    resize:none;
+    vertical-align:top;
+}
+
+input:focus,select:focus,textarea:focus{
+    border:2px solid #1565c0;
+    outline:none;
+}
+
+.gender{
+    width:auto;
+    height:auto;
+}
+
+.gender-label{
+    width:auto;
+    font-weight:normal;
+    margin-right:15px;
+}
+
+#submit{
+    margin-left:135px;
+    margin-right:15px;
+    width:105px;
+    height:45px;
+    border:none;
+    border-radius:20px;
+    background-color:#1565c0;
+    color:white;
+    font-weight:bold;
+}
+
+#reset{
+    width:105px;
+    height:45px;
+    border:none;
+    border-radius:20px;
+    background-color:#90caf9;
+    color:#222;
+    font-weight:bold;
+}
+
+#submit:hover{
+    background-color:#0d47a1;
+}
+
+#reset:hover{
+    background-color:#64b5f6;
+}
+
+</style>
+</head>
+
+<body>
+
+<form>
+
+<h1>Student Registration Form</h1>
+
+<label>Registration No.</label>
+<input type="text" placeholder="Enter Reg. No." required>
+<br><br>
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter Full Name" required>
+<br><br>
+
+<label>Gender</label>
+<input type="radio" name="gender" class="gender">
+<label class="gender-label">Male</label>
+
+<input type="radio" name="gender" class="gender">
+<label class="gender-label">Female</label>
+
+<br><br>
+
+<label>Date of Birth</label>
+<input type="date" required>
+<br><br>
+
+<label>Email ID</label>
+<input type="email" placeholder="Enter Email" required>
+<br><br>
+
+<label>Mobile Number</label>
+<input type="tel" placeholder="Enter Mobile No." required>
+<br><br>
+
+<label>Department</label>
+<select required>
+<option value="">Choose Department</option>
+<option>Computer Science</option>
+<option>Information Technology</option>
+<option>Electronics</option>
+<option>Mechanical</option>
+<option>Civil</option>
+<option>Management</option>
+</select>
+<br><br>
+
+<label>Course</label>
+<select required>
+<option value="">Choose Course</option>
+<option>BCA</option>
+<option>BBA</option>
+<option>B.Tech</option>
+<option>MCA</option>
+<option>MBA</option>
+</select>
+<br><br>
+
+<label>Semester</label>
+<select required>
+<option value="">Select Semester</option>
+<option>1st Semester</option>
+<option>2nd Semester</option>
+<option>3rd Semester</option>
+<option>4th Semester</option>
+<option>5th Semester</option>
+<option>6th Semester</option>
+</select>
+<br><br>
+
+<label>College Name</label>
+<input type="text" placeholder="Enter College Name" required>
+<br><br>
+
+<label>Address</label>
+<textarea placeholder="Enter Complete Address"></textarea>
+<br><br>
+
+<label>Upload Resume</label>
+<input type="file" accept=".pdf,.doc,.docx">
+<br><br>
+
+<button type="submit" id="submit">Submit</button>
+<button type="reset" id="reset">Clear</button>
+
+</form>
+
+</body>
+</html>
