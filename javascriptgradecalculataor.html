@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <style>
+        div {
+            border: 1px solid black;
+            height: 750px; 
+            width: 500px;
+            text-align: center;
+            margin: 20px auto; 
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Grade Calculator</h1>
+        <form>
+            Student Name: <input type="text" id="name"><br><br>
+            Roll no. : <input type="number" id="roll"><br><br>
+            <h2>Enter Subject Marks:</h2>
+            EFT : <input type="number" id="eft" min="0" max="100"><br><br>
+            AUI : <input type="number" id="aui"min="0" max="100"><br><br>
+            CLS : <input type="number" id="cls"min="0" max="100"><br><br>
+            ADST : <input type="number" id="adst"min="0" max="100"><br><br>
+            PST : <input type="number" id="pst"min="0" max="100"><br><br>
+            <button type="button" onclick="checkresult()">Result</button>
+            <button type="reset">Reset</button><br><br>
+        </form>
+
+        <p id="name1"></p>
+        <p id="roll1"></p>
+        <p id="total"></p>
+        <p id="Average"></p>
+        <p id="percentage"></p>
+        <p id="grade"></p>
+        <p id="passfail"></p> 
+    </div>
+
+    <script>
+        function checkresult() {
+            let name = document.getElementById("name").value;
+            let roll = document.getElementById("roll").value;
+            let sub1 = Number(document.getElementById("eft").value);
+            let sub2 = Number(document.getElementById("aui").value);
+            let sub3 = Number(document.getElementById("cls").value);
+            let sub4 = Number(document.getElementById("adst").value);
+            let sub5 = Number(document.getElementById("pst").value);
+
+            document.getElementById("name1").innerHTML = " Name : " + name;
+            document.getElementById("roll1").innerHTML = "Roll no. :" + roll;
+
+            let total = sub1 + sub2 + sub3 + sub4 + sub5;
+            document.getElementById("total").innerHTML = "Total Marks : " + total;
+
+            let avg = total / 5;
+            document.getElementById("Average").innerHTML = "Average Marks : " + avg;
+
+            let pct = (total / 500) * 100;
+            document.getElementById("percentage").innerHTML = "Percentage : " + pct.toFixed(2) + "%";
+
+            if (pct > 80 && pct <= 100) {
+                document.getElementById("grade").innerHTML = "Grade : O+";
+            } else if (pct > 60 && pct <= 80) {
+                document.getElementById("grade").innerHTML = "Grade : A";
+            } else if (pct >= 45 && pct <= 60) {
+                document.getElementById("grade").innerHTML = "Grade : B";
+            } else {
+                document.getElementById("grade").innerHTML = "Grade : F";
+            } 
+
+
+            if (pct >= 45) {
+                document.getElementById("passfail").innerHTML = "Pass/Fail : Pass";
+            } else {
+                document.getElementById("passfail").innerHTML = "Pass/Fail : Fail";
+            }
+        }
+    </script>
+</body>
+
+</html>

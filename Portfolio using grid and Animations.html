@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aastha Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f5f0e8;
+        }
+
+        header {
+            background-color: #6b4f3a;
+            color: white;
+            text-align: center;
+            padding: 40px;
+            animation: welcome 2s;
+        }
+
+        @keyframes welcome {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        section {
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #6b4f3a;
+        }
+
+        .about {
+            background-color: #fffaf3;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fffaf3;
+            padding: 25px;
+            border: 1px solid #b89b7a;
+            transition: 0.5s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background-color: #ead8c0;
+        }
+
+        button {
+            background-color: #8b5e3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #5a3825;
+        }
+
+        .skills {
+            background-color: #efe3d2;
+        }
+
+        .skills p {
+            display: inline-block;
+            background-color: #d8bfa3;
+            padding: 10px 20px;
+            margin: 10px;
+            border: 1px solid #8b5e3c;
+            transition: 0.3s;
+        }
+
+        .skills p:hover {
+            transform: scale(1.1);
+            background-color: #c8a27a;
+        }
+
+        .contact {
+            background-color: #fffaf3;
+        }
+
+        form {
+            width: 300px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #b89b7a;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        footer {
+            background-color: #6b4f3a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Aastha's Portfolio</h1>
+        <p>Hello, I am Aastha</p>
+        <p>Creative Web Developer</p>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate student who enjoys creating websites
+            and learning new technologies. I like designing simple
+            and user-friendly web pages.
+        </p>
+    </section>
+
+    <section>
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="card">
+                <h3>Online Book Store</h3>
+                <p>A website for browsing and purchasing books online.</p>
+                <button>View Project</button>
+            </div>
+
+            <div class="card">
+                <h3>College Fest Website</h3>
+                <p>A website showing college events, schedules and registrations.</p>
+                <button>View Project</button>
+            </div>
+
+            <div class="card">
+                <h3>Student Expense Tracker</h3>
+                <p>A simple website to manage daily student expenses.</p>
+                <button>View Project</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>My Skills</h2>
+
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+        <p>Python</p>
+        <p>SQL</p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+
+        <form>
+            <input type="text" placeholder="Enter Your Name">
+
+            <input type="email" placeholder="Enter Your Email">
+
+            <textarea placeholder="Write Your Message"></textarea>
+
+            <br><br>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Aastha | My Portfolio</p>
+    </footer>
+
+</body>
+</html>
+```
