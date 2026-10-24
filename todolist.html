@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>To Do List</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+
+        .box {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid black;
+            background-color: rgb(209, 130, 130);
+            border-radius: 20px;
+            box-shadow: 4px 8px 16px black;
+            margin-top: 150px;
+        }
+
+        input {
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px;
+            margin: 5px;
+            box-shadow: 2px 3px 4px black;
+            background-color: rgb(251, 251, 238);
+        }
+
+        button:hover{
+            background-color: yellow;
+        }
+
+        li {
+            margin: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>My To-Do List</h1>
+
+        <input type="text" id="task" placeholder="Enter task">
+
+        <button onclick="addTask()">Add</button>
+
+        <ul id="list"></ul>
+
+        <button onclick="clearTask()">Clear Completed</button>
+
+    </div>
+
+
+    <script>
+
+        var count = 0;
+
+
+        function addTask() {
+
+            var task = document.getElementById("task").value;
+
+            if (task == "") {
+                alert("Enter a task");
+                return;
+            }
+
+            count = count + 1;
+
+            document.getElementById("list").innerHTML +=
+                "<li id='item" + count + "'>" +
+                "<input type='checkbox' id='check" + count + "'> " +
+                "<span id='text" + count + "'>" + task + "</span> " +
+                "<button onclick='editTask(" + count + ")'>Edit</button>" +
+                "</li>";
+
+            document.getElementById("task").value = "";
+        }
+
+
+        function editTask(number) {
+
+            var oldTask =
+                document.getElementById("text" + number).innerHTML;
+
+            var newTask =
+                prompt("Enter new task", oldTask);
+
+            if (newTask != "" && newTask != null) {
+
+                document.getElementById("text" + number).innerHTML =
+                    newTask;
+
+            }
+        }
+
+
+        function clearTask() {
+
+            for (var i = 1; i <= count; i++) {
+
+                var check =
+                    document.getElementById("check" + i);
+
+                if (check != null && check.checked) {
+
+                    document.getElementById("item" + i).remove();
+
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
